@@ -8,13 +8,14 @@
 
 %define name old_rpmdrake
 %define version 2.27.1
-%define release %mkrel 2
+%define release %mkrel 3
 
 Name: %{name}
 Version: %{version}
 Release: %{release}
 License: GPL
 Source0: %name-%version.tar.bz2
+Patch0:	 old_rpmdrake-use-another-config-file.patch
 Summary: Mandriva Linux graphical front end for sofware installation/removal
 Requires: perl-MDK-Common >= 1.1.18-2mdk
 Requires: urpmi >= 4.8.4
@@ -48,6 +49,7 @@ A fourth program manages the media (add, remove, edit).
 rm -rf $RPM_BUILD_ROOT
 
 %setup -q
+%patch0 -p0
 
 %build
 make OPTIMIZE="$RPM_OPT_FLAGS -Wall" PREFIX=%{_prefix} INSTALLDIRS=vendor
