@@ -70,7 +70,7 @@ cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-oldrpmdrake.desktop << EO
 Name=Browse Available Software (old)
 Comment=A graphical front end for installing, removing and updating packages (old)
 Exec=/usr/sbin/rpmdrake
-Icon=/usr/share/icons/rpmdrake.png
+Icon=/usr/share/icons/rpmdrake
 Type=Application
 Categories=GTK;X-MandrivaLinux-System-Configuration-Packaging;Settings;PackageManager;
 EOF
@@ -80,7 +80,7 @@ cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-oldrpmdrake-root.desktop 
 Name=Install, Remove & Update Software (old)
 Comment=A graphical front end for installing, removing and updating packages (old)
 Exec=old_rpmdrake
-Icon=/usr/share/icons/rpmdrake.png
+Icon=/usr/share/icons/rpmdrake
 Type=Application
 Categories=GTK;X-MandrivaLinux-System-Configuration-Packaging;Settings;PackageManager;
 EOF
