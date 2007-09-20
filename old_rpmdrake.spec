@@ -8,7 +8,7 @@
 
 %define name old_rpmdrake
 %define version 2.27.1
-%define release %mkrel 3
+%define release %mkrel 4
 
 Name: %{name}
 Version: %{version}
@@ -72,7 +72,8 @@ Comment=A graphical front end for installing, removing and updating packages (ol
 Exec=/usr/sbin/rpmdrake
 Icon=/usr/share/icons/rpmdrake
 Type=Application
-Categories=GTK;X-MandrivaLinux-System-Configuration-Packaging;Settings;PackageManager;
+Categories=X-MandrivaLinux-CrossDesktop;GTK;System;PackageManager;
+NoDisplay=true
 EOF
 
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-oldrpmdrake-root.desktop << EOF
@@ -82,7 +83,8 @@ Comment=A graphical front end for installing, removing and updating packages (ol
 Exec=old_rpmdrake
 Icon=/usr/share/icons/rpmdrake
 Type=Application
-Categories=GTK;X-MandrivaLinux-System-Configuration-Packaging;Settings;PackageManager;
+Categories=X-MandrivaLinux-CrossDesktop;GTK;System;PackageManager;
+NoDisplay=true
 EOF
 
 %clean
