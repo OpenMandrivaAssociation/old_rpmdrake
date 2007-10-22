@@ -8,13 +8,14 @@
 
 %define name old_rpmdrake
 %define version 2.27.1
-%define release %mkrel 4
+%define release %mkrel 5
 
 Name: %{name}
 Version: %{version}
 Release: %{release}
 License: GPL
 Source0: %name-%version.tar.bz2
+Source1: base.png
 Patch0:	 old_rpmdrake-use-another-config-file.patch
 Summary: Mandriva Linux graphical front end for sofware installation/removal
 Requires: perl-MDK-Common >= 1.1.18-2mdk
@@ -62,6 +63,9 @@ install -m 644 old_urpm.pm $RPM_BUILD_ROOT/%{perl_vendorlib}
 install -m 644 old_urpm/*.pm $RPM_BUILD_ROOT/%{perl_vendorlib}/old_urpm
 install -m 644 old_ugtk2.pm $RPM_BUILD_ROOT/usr/lib/libDrakX
 
+mkdir -p $RPM_BUILD_ROOT/%_datadir/rpmdrake/icons
+install -m 644 %SOURCE1 $RPM_BUILD_ROOT/%_datadir/rpmdrake/icons/base.png
+
 mkdir -p $RPM_BUILD_ROOT%{_menudir}
 cp %{name}.menu $RPM_BUILD_ROOT%{_menudir}/%{name}
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
@@ -105,5 +109,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_menudir}/%{name}
 %{_datadir}/applications/mandriva-*.desktop
 /usr/lib/libDrakX/old_ugtk2.pm
+%_datadir/rpmdrake/icons/base.png
 
 
