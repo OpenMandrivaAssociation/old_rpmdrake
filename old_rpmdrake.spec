@@ -30,6 +30,7 @@ Requires: rpmdrake
 # for now, packdrake (5.0.9) works better with this
 Requires: perl-Compress-Zlib >= 1.33
 BuildRequires: perl-devel
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Group: System/Configuration/Packaging
 URL: http://cvs.mandriva.com/cgi-bin/cvsweb.cgi/soft/rpmdrake/
 Obsoletes: MandrakeUpdate
