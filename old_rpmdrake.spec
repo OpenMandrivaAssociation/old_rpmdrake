@@ -8,7 +8,7 @@
 
 %define name old_rpmdrake
 %define version 2.27.1
-%define release %mkrel 5
+%define release %mkrel 6
 
 Name: %{name}
 Version: %{version}
@@ -45,6 +45,9 @@ Mandriva Linux system; it has 3 different modes:
 - MandrivaUpdate (software packages updates).
 
 A fourth program manages the media (add, remove, edit).
+
+This old flavor of rpmdrake is UNSUPPORTED and is there only in order to
+compare, find potential regressions, ...
 
 %prep
 rm -rf $RPM_BUILD_ROOT
