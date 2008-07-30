@@ -8,7 +8,7 @@
 
 %define name old_rpmdrake
 %define version 2.27.1
-%define release %mkrel 6
+%define release %mkrel 8
 
 Name: %{name}
 Version: %{version}
