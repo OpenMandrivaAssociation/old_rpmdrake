@@ -69,8 +69,6 @@ install -m 644 old_ugtk2.pm $RPM_BUILD_ROOT/usr/lib/libDrakX
 mkdir -p $RPM_BUILD_ROOT/%_datadir/rpmdrake/icons
 install -m 644 %SOURCE1 $RPM_BUILD_ROOT/%_datadir/rpmdrake/icons/base.png
 
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cp %{name}.menu $RPM_BUILD_ROOT%{_menudir}/%{name}
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-oldrpmdrake.desktop << EOF
 [Desktop Entry]
@@ -113,7 +111,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_sbindir}/old*
 %{_bindir}/*
 %{perl_vendorlib}/*
-%{_menudir}/%{name}
 %{_datadir}/applications/mandriva-*.desktop
 /usr/lib/libDrakX/old_ugtk2.pm
 %_datadir/rpmdrake/icons/base.png
