@@ -1,0 +1,11 @@
+--- ./old_rpmdrake.pm.tv2	2007-08-01 18:47:26.000000000 +0200
++++ ./old_rpmdrake.pm	2007-08-01 18:46:32.000000000 +0200
+@@ -143,7 +143,7 @@ sub myexit { ugtk2::exit(undef, @_) }
+ 
+ $ENV{HOME} ||= '/root';
+ 
+-our $configfile = "$ENV{HOME}/.rpmdrake";
++our $configfile = "$ENV{HOME}/.old_rpmdrake";
+ our %config = (
+     mandrakeupdate_wanted_categories => { var => \our $mandrakeupdate_wanted_categories, default => [ qw(security) ] },
+     already_splashed => { var => \our $already_splashed, default => [] },
