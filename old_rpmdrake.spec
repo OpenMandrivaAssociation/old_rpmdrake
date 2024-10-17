@@ -32,7 +32,7 @@ Requires: perl-Compress-Zlib >= 1.33
 BuildRequires: perl-devel
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Group: System/Configuration/Packaging
-URL: http://cvs.mandriva.com/cgi-bin/cvsweb.cgi/soft/rpmdrake/
+URL: https://cvs.mandriva.com/cgi-bin/cvsweb.cgi/soft/rpmdrake/
 Obsoletes: MandrakeUpdate
 Provides: MandrakeUpdate
 Conflicts: drakconf < 10.1-4mdk
