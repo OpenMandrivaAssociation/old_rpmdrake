@@ -29,6 +29,7 @@ Requires: perl-Locale-gettext >= 1.01-7mdk
 Requires: rpmdrake
 # for now, packdrake (5.0.9) works better with this
 Requires: perl-Compress-Zlib >= 1.33
+BuildRequires:	make
 BuildRequires: perl-devel
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Group: System/Configuration/Packaging
